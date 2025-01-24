@@ -1,0 +1,16 @@
+name = "real-time-whiteboard-worker"
+type = "javascript"
+compatibility_date = "2025-01-20"
+
+# Specify the entry file for your worker
+main = "src/index.js"
+
+
+[durable_objects]
+bindings = [
+  { name = "WHITEBOARD", class_name = "Whiteboard" }
+]
+
+[[kv_namespaces]]
+binding = "WHITEBOARD_KV"
+id = "f63a839f5bdd434680a4bfd2b2af20f5"
